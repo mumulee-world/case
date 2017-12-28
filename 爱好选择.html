@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<p>你的爱好是什么？</p>
+		<form id="check" method="post">
+			<input type="checkbox" name="hobby" value="篮球" />篮球
+			<input type="checkbox" name="hobby" value="足球" />足球
+			<input type="checkbox" name="hobby" value="游泳" />游泳
+			<input type="checkbox" name="hobby" value="绘画" />绘画
+			<input type="checkbox" name="hobby" value="钢琴" />钢琴<br />
+		</form>
+		<button onclick="allcheck()">全选</button>
+		<button onclick="allnocheck()">全不选</button>
+		<button onclick="exchange()">反选</button>
+	</body>
+	<script type="text/javascript">
+		var Oinp=document.getElementById("check").childNodes;
+		function allcheck(){
+			for(var i=0;i<Oinp.length;i++){
+				Oinp[i].checked=true;
+			}
+		}
+		function allnocheck(){
+			for(var i=0;i<Oinp.length;i++){
+				Oinp[i].checked=false;
+			}
+		}
+		function exchange(){
+			for(var i=0;i<Oinp.length;i++){
+				if(Oinp[i].checked==true){
+					Oinp[i].checked=false;
+				}else{
+					Oinp[i].checked=true;
+				}
+			}
+		}
+	</script>
+</html>
