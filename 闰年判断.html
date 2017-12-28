@@ -48,11 +48,11 @@
 				var tips=document.getElementById("tips");
 				if(!isNaN(year) && year>0){
 					if(year%100!=0 && year%4==0){
-						tips.innerText="主人主人，"+year+"是闰年";
+						tips.innerText="主人主人，公元"+year+"年是闰年";
 					}else if(year%100==0 && year%400==0){
-						tips.innerText="主人主人，"+year+"是闰年";
+						tips.innerText="主人主人，公元"+year+"年是闰年";
 					}else{
-						tips.innerText="主人主人，"+year+"是平年";
+						tips.innerText="主人主人，公元"+year+"年是平年";
 					}
 				}else{
 					tips.innerText="我的主人，"+"请输入正确格式好吗？";
