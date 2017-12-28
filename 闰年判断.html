@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+		*{
+			padding: 0;
+			margin: 0;
+		}
+			.box{
+				width: 370px;
+				margin: 50px auto;
+				text-align: center;
+			}
+			#year{
+				width: 200px;
+				height: 30px;
+				font-size: 14px;
+				padding-left: 10px;
+				outline: none;
+			}
+			button{
+				width: 150px;
+				height: 34px;
+				border: none;
+				font-size: 14px;
+				background-color: yellowgreen;
+				outline: none;
+				box-shadow: 2px 2px 5px 2px gainsboro;
+			}
+			#tips{
+				height: 200px;
+				margin-top: 20px;
+				text-align: left;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="box">
+			<input type="text" name="" id="year" value="" placeholder="请输入年份" />
+			<button onclick="judge()">判断年份是否为闰年</button>
+			<div id="tips"></div>
+		</div>
+		<script type="text/javascript">
+			function judge(){
+				var year=document.getElementById("year").value;
+				var tips=document.getElementById("tips");
+				if(!isNaN(year) && year>0){
+					if(year%100!=0 && year%4==0){
+						tips.innerText="主人主人，"+year+"是闰年";
+					}else if(year%100==0 && year%400==0){
+						tips.innerText="主人主人，"+year+"是闰年";
+					}else{
+						tips.innerText="主人主人，"+year+"是平年";
+					}
+				}else{
+					tips.innerText="我的主人，"+"请输入正确格式好吗？";
+				}
+			}
+			
+		</script>
+	</body>
+</html>
