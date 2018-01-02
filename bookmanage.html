@@ -20,20 +20,26 @@
 		</div>
 		<script type="text/javascript">
 			var Oul=document.getElementById("list");
-			
-			
 			function add(){
 				var bookname=document.getElementById("bookname");
 				var newLi=document.createElement("li");
-				newLi.innerText="《"+bookname.value+"》";
-				Oul.appendChild(newLi);
-				bookname.value="";
+				if(bookname.value==""){
+					alert("书名不能为空");
+				}else{
+					newLi.innerText="《"+bookname.value+"》";
+					Oul.appendChild(newLi);
+					bookname.value="";
+				}
 			}
 			
 			function del(){
 				var dele=document.getElementById("delnum");
 				var index=Oul.children;
-				Oul.removeChild(index[dele.value-1]);
+				if(dele.value>index.length){
+					alert("越界，不能删除");
+				}else{
+					Oul.removeChild(index[dele.value-1]);
+				}
 			}
 			
 			function place(){
@@ -41,8 +47,14 @@
 				var changenum=document.getElementById("num");
 				var flag=Oul.children;
 				var addLi=document.createElement("li");
-				addLi.innerText="《"+place.value+"》";
-				Oul.replaceChild(addLi,flag[changenum.value-1])
+				if(place.value==""){
+					alert("书名不能为空");
+				}else if(changenum.value>flag.length){
+					alert("越界不能替换");
+				}else{
+					addLi.innerText="《"+place.value+"》";
+					Oul.replaceChild(addLi,flag[changenum.value-1])
+				}
 			}
 		</script>
 	</body>
