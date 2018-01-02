@@ -7,5 +7,5 @@ https://mumulee-world.github.io/case/multiplicationTable
 https://mumulee-world.github.io/case/selectTheHobby  
 实时显示时间
 https://mumulee-world.github.io/case/dynamicTime  
-实时显示时间
+图书管理
 https://mumulee-world.github.io/case/bookmanage  
