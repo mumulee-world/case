@@ -2,7 +2,7 @@
 case1:
 <a href="https://mumulee-world.github.io/case/leapYear">闰年判断</a>  
 case2:
-<a href="https://mumulee-world.github.io/case/multiplicationTable">闰年判断</a>  
+<a href="https://mumulee-world.github.io/case/multiplicationTable">九九乘法表</a>  
 case3:
 <a href="https://mumulee-world.github.io/case/selectTheHobby">爱好选择</a>   
 case4:
