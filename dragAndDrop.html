@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<style type="text/css">
+			.box{
+				width: 50px;
+				height: 50px;
+				background-color: red;
+				margin: 10px;
+				float: left;
+			}
+			.target{
+				width: 90%;
+				height: 300px;
+				border: 5px dashed black;
+				position: absolute;
+				bottom: 20px;
+				left: 5%;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="box" draggable="true"></div>
+		<div class="box" draggable="true"></div>
+		<div class="box" draggable="true"></div>
+		<div class="box" draggable="true"></div>
+		<div class="box" draggable="true"></div>
+		<div class="box" draggable="true"></div>
+		<div class="target"></div>
+		<script type="text/javascript">
+			var Odiv=document.querySelectorAll(".box");
+			var Otarget=document.querySelector(".target");
+			var temp=null;
+			for(var i=0;i<Odiv.length;i++){
+				Odiv[i].ondragstart=function(e){
+					temp=this;
+				}
+				Odiv[i].ondragend=function(e){
+					temp=null;
+				}
+			}
+			Otarget.ondragenter=function(e){
+				Otarget.style.borderColor="red";
+			}
+			Otarget.ondragover=function(e){
+				e.preventDefault();
+			}
+			Otarget.ondrop=function(e){
+				Otarget.appendChild(temp);
+				Otarget.style.borderColor="black";
+			}
+		</script>
+	</body>
+</html>
