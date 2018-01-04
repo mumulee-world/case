@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			#canvas{
+				width: 400px;
+				height: 400px;
+				border: 1px red solid;
+				display: block;
+				margin: 50px auto;
+			}
+		</style>
+	</head>
+	<body>
+		<canvas id="canvas" width="800" height="800"></canvas>
+		<script type="text/javascript">
+			var paper=document.getElementById("canvas");
+			var pen=paper.getContext("2d");
+			var n=0;//起始值
+			var t=setInterval(function(){
+				n=n+5; //步进值
+				x=400-n; // x,y,w,h为四个参数
+				y=x;
+				w=n*2;
+				h=w;
+				pen.clearRect(x,y,w,h);//橡皮擦
+				pen.lineWidth=5;
+				pen.strokeStyle="yellowgreen";
+				pen.strokeRect(x,y,w,h);
+				if(n>400){
+					n=0;
+				}
+			},50)
+		</script>
+	</body>
+</html>

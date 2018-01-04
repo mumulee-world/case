@@ -12,4 +12,8 @@ case5:
 case6:
 <a href="https://mumulee-world.github.io/case/dragAndDrop">拖拽</a>  
 case7:
-<a href="https://mumulee-world.github.io/case/deleteArticle">删除文章操作</a> 
+<a href="https://mumulee-world.github.io/case/deleteArticle">删除文章操作</a>  
+case8:
+<a href="https://mumulee-world.github.io/case/canvas-scale">canvas制作放大的矩形</a>  
+case9:
+<a href="https://mumulee-world.github.io/case/sportSquare">canvas制作，沿着圆运动的方块</a>  
