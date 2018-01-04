@@ -16,4 +16,6 @@ case7:
 case8:
 <a href="https://mumulee-world.github.io/case/canvas-scale">canvas制作放大的矩形</a>  
 case9:
-<a href="https://mumulee-world.github.io/case/sportSquare">canvas制作，沿着圆运动的方块</a>  
+<a href="https://mumulee-world.github.io/case/sportSquare">canvas制作，沿着圆运动的方块</a>   
+case10:
+<a href="https://mumulee-world.github.io/case/tangram">canvas制作七巧板</a>
