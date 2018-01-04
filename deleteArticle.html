@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			.wrap{
+				width: 450px;
+				border: 1px black solid;
+				padding: 20px;
+				margin: 50px auto;
+			}
+			.wrap:after{
+				display: block;
+				content: "";
+				clear: both;
+			}
+			.wrap .tong{
+				float: left;
+			}
+			.wrap .list{
+				float: right;
+				list-style: none;
+			}
+			.wrap .list li{
+				padding:0px 30px;
+				line-height: 2em;
+			}
+			.wrap .list li:hover{
+				background-color: gainsboro;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="wrap">
+			<div class="tong">
+				<img src="img/trash1.png" class="prcture"/>
+			</div>
+			<ul class="list">
+				<li draggable="true">文章一</li>
+				<li draggable="true">文章二</li>
+				<li draggable="true">文章三</li>
+				<li draggable="true">文章四</li>
+				<li draggable="true">文章五</li>
+				<li draggable="true">文章六</li>
+			</ul>
+		</div>
+		<ul class="del"></ul>
+		<script type="text/javascript">
+			var tong=document.querySelector(".tong");
+			var article=document.querySelectorAll(".list li");
+			var del=document.querySelector(".del");
+			var temp=null;
+			var prcture=document.querySelector(".prcture");
+			for(var i=0;i<article.length;i++){
+				article[i].ondragstart=function(e){
+					temp=this;
+				}
+				article[i].ondragend=function(e){
+					temp=null;
+				}
+			}
+			tong.ondragover=function(e){
+				e.preventDefault();
+			}
+			tong.ondrop=function(e){
+				del.appendChild(temp);
+				prcture.setAttribute("src","img/trash2.jpg");
+			}
+		</script>
+		
+		
+		
+		
+		
+		
+		
+		
+		
+	</body>
+</html>

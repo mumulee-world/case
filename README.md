@@ -11,4 +11,5 @@ case5:
 <a href="https://mumulee-world.github.io/case/bookmanage">图书管理</a>  
 case6:
 <a href="https://mumulee-world.github.io/case/dragAndDrop">拖拽</a>  
-  
+case7:
+<a href="https://mumulee-world.github.io/case/deleteArticle">删除文章操作</a> 
